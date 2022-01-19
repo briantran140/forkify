@@ -136,6 +136,10 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
+const newFeature = function () {
+  console.log('Welcome to the application!');
+};
+
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
@@ -146,7 +150,7 @@ const init = function () {
   addRecipeView.addHandlerUpload(controlAddRecipe);
   //If we test the controlServing function right here, it won't work because it will run immediately while the other functions are asynchronous functions and it has to wait for it.
   // controlServings();
-  console.log('Welcome!');
+  newFeature();
 };
 
 init();
